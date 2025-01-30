@@ -1,0 +1,26 @@
+body {
+    background: url('img/fon.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+}
+header {
+    padding: 20px;
+}
+.logo {
+    width: 30%;
+    height: auto;
+}
+main {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    border-radius: 10px;
+}
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
