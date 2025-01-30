@@ -8,15 +8,49 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Press Enter</p>
+            <button id="enterButton">Enter</button>
+        </div>
+    </div>
     <header>
         <img src="img/logo.png" alt="Лого" class="logo">
-        <h1>Welcome</h1>
+        <!-- <h1>Welcome</h1> -->
     </header>
-    <main>
-        <p>text</p>
-    </main>
-    <footer>
-        <p>&copy; 2025 </p>
-    </footer>
+    <!-- <main> -->
+        <!-- <p>text</p> -->
+    <!-- </main> -->
+    <!-- <footer> -->
+        <!-- <p>&copy; 2025 </p> -->
+    <!-- </footer> -->
+    <button id="musicToggle" class="music-toggle">🔊</button>
+    <audio id="music" src="Lil Pump - Gucci Gang [Official Music Video].mp3" loop></audio>
+    <script>
+        document.getElementById("enterButton").addEventListener("click", function() {
+            document.getElementById("music").play();
+            document.getElementById("modal").style.display = "none";
+        });
+        
+        let isPlaying = false;
+        document.getElementById("musicToggle").addEventListener("click", function() {
+            let music = document.getElementById("music");
+            if (isPlaying) {
+                music.pause();
+                this.textContent = "🔈";
+            } else {
+                music.play();
+                this.textContent = "🔊";
+            }
+            isPlaying = !isPlaying;
+        });
+    </script>
+    <audio id="music" src="Lil Pump - Gucci Gang [Official Music Video].mp3"></audio>
+    <script>
+        document.getElementById("enterButton").addEventListener("click", function() {
+            document.getElementById("music").play();
+            document.getElementById("modal").style.display = "none";
+        });
+    </script>
 </body>
 </html>
